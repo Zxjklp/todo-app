@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="A simple todo app to manage tasks efficiently.">
+  <link rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="../images/favicon-32x32.png">
+  <link rel="preconnect"
+    href="https://fonts.googleapis.com">
+  <link rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="styles.css">
+
+  <title>Frontend Mentor | Todo app</title>
+</head>
+
+<body>
+  <main>
+
+    <div class="background"></div>
+
+    <div class="container">
+      <header>
+        <h1>Todo</h1>
+        <button class="theme-toggle"
+          aria-label="Toggle dark mode">
+          <img src="../images/icon-moon.svg"
+            alt="Dark mode toggle"
+            class="moon">
+          <img src="../images/icon-sun.svg"
+            alt="Light mode toggle"
+            class="sun hidden">
+        </button>
+      </header>
+
+      <div class="new-todo">
+        <div class="check-circle"></div>
+        <input type="text"
+          placeholder="Create a new todo..."
+          aria-label="Create a new todo">
+      </div>
+
+      <div class="todo-list">
+        <div class="todo-item completed">
+          <button class="check-circle checked"
+            aria-label="Mark as incomplete">
+            <img src="../images/icon-check.svg"
+              alt="">
+          </button>
+          <p class="todo-text">Complete online JavaScript course</p>
+          <button class="delete"
+            aria-label="Delete todo">
+            <img src="../images/icon-cross.svg"
+              alt="Delete">
+          </button>
+        </div>
+
+        <div class="todo-item">
+          <button class="check-circle"
+            aria-label="Mark as complete"></button>
+          <p class="todo-text">Jog around the park 3x</p>
+          <button class="delete"
+            aria-label="Delete todo">
+            <img src="../images/icon-cross.svg"
+              alt="Delete">
+          </button>
+        </div>
+
+        <div class="todo-item">
+          <button class="check-circle"
+            aria-label="Mark as complete"></button>
+          <p class="todo-text">10 minutes meditation</p>
+          <button class="delete"
+            aria-label="Delete todo">
+            <img src="../images/icon-cross.svg"
+              alt="Delete">
+          </button>
+        </div>
+
+        <div class="todo-item">
+          <button class="check-circle"
+            aria-label="Mark as complete"></button>
+          <p class="todo-text">Read for 1 hour</p>
+          <button class="delete"
+            aria-label="Delete todo">
+            <img src="../images/icon-cross.svg"
+              alt="Delete">
+          </button>
+        </div>
+
+        <div class="todo-item">
+          <button class="check-circle"
+            aria-label="Mark as complete"></button>
+          <p class="todo-text">Pick up groceries</p>
+          <button class="delete"
+            aria-label="Delete todo">
+            <img src="../images/icon-cross.svg"
+              alt="Delete">
+          </button>
+        </div>
+
+        <div class="todo-item">
+          <button class="check-circle"
+            aria-label="Mark as complete"></button>
+          <p class="todo-text">Complete Todo App on Frontend Mentor</p>
+          <button class="delete"
+            aria-label="Delete todo">
+            <img src="../images/icon-cross.svg"
+              alt="Delete">
+          </button>
+        </div>
+
+        <div class="todo-footer">
+          <span class="items-left">5 items left</span>
+
+          <div class="filters">
+            <button class="filter active"
+              data-filter="all">All</button>
+            <button class="filter"
+              data-filter="active">Active</button>
+            <button class="filter"
+              data-filter="completed">Completed</button>
+          </div>
+
+          <button class="clear-completed">Clear Completed</button>
+        </div>
+      </div>
+
+      <div class="drag-info">
+        <p>Drag and drop to reorder list</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
