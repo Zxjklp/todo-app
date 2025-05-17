@@ -1,4 +1,3 @@
-// DOM Elements
 const body = document.querySelector("body");
 const themeToggle = document.querySelector(".theme-toggle");
 const moonIcon = document.querySelector(".moon");
@@ -10,15 +9,8 @@ const filterButtons = document.querySelectorAll(".filter");
 const clearCompletedButton = document.querySelector(".clear-completed");
 const todoItems = document.querySelectorAll(".todo-item");
 
-// State
-let todos = [
-  { id: 1, text: "Complete online JavaScript course", completed: true },
-  { id: 2, text: "Jog around the park 3x", completed: false },
-  { id: 3, text: "10 minutes meditation", completed: false },
-  { id: 4, text: "Read for 1 hour", completed: false },
-  { id: 5, text: "Pick up groceries", completed: false },
-  { id: 6, text: "Complete Todo App on Frontend Mentor", completed: false },
-];
+// Start with an empty todos array
+let todos = [];
 let currentFilter = "all";
 
 // Initialize the app
@@ -164,7 +156,15 @@ function renderTodos() {
     todoList.insertBefore(todoItem, todoFooter);
   });
 
+  // Update the items left counter
   updateItemsLeft();
+
+  // Update visibility of todo list elements based on if we have any todos
+  if (todos.length === 0) {
+    clearCompletedButton.style.visibility = "hidden";
+  } else {
+    clearCompletedButton.style.visibility = "visible";
+  }
 }
 
 function createTodoElement(todo) {
@@ -297,5 +297,4 @@ function handleDragEnd() {
   draggedItem = null;
 }
 
-// Initialize the app when the DOM is loaded
-document.addEventListener("DOMContentLoaded", init);
+init();

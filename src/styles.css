@@ -252,7 +252,6 @@ h1 {
   margin-top: 2rem;
 }
 
-/* Media Queries */
 @media (max-width: 767px) {
   .background {
     background-image: url('../images/bg-mobile-light.jpg');
