@@ -14,12 +14,6 @@ This is a solution to the [Todo app challenge on Frontend Mentor](https://www.fr
 - 💾 Local storage persistence
 - 📱 Responsive design for mobile and desktop
 
-## Getting Started
-
-1. Clone this repository
-2. Open `src/index.html` in your browser
-3. Start managing your todos!
-
 ## Technologies Used
 
 - HTML5
