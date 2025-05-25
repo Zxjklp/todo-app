@@ -166,12 +166,11 @@ function renderTodos() {
 
   // Update the items left counter
   updateItemsLeft();
-
   // Update visibility of todo list elements based on if we have any todos
   if (todos.length === 0) {
-    clearCompletedButton.style.visibility = "hidden";
+    clearCompletedButton.classList.add("invisible");
   } else {
-    clearCompletedButton.style.visibility = "visible";
+    clearCompletedButton.classList.remove("invisible");
   }
 }
 

@@ -86,6 +86,10 @@ h1 {
   display: none;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 .new-todo {
   display: flex;
   align-items: center;
