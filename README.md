@@ -14,7 +14,7 @@ This is a solution to the [Todo app challenge on Frontend Mentor](https://www.fr
 - 💾 Local storage persistence
 - 📱 Responsive design for mobile and desktop
 
-## Technologies Used
+## Built with
 
 - HTML5
 - CSS3 (with CSS custom properties)
