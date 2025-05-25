@@ -27,7 +27,7 @@
 
 body {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 1.125rem; 
+  font-size: 1.125rem;
   background-color: var(--very-light-gray);
   min-height: 100vh;
   transition: background-color 0.3s ease;
@@ -161,7 +161,7 @@ h1 {
 }
 
 .todo-text {
-  flex: 1; 
+  flex: 1;
   color: var(--very-dark-grayish-blue);
   transition: color 0.3s ease, text-decoration 0.3s ease;
   cursor: pointer;

@@ -194,11 +194,10 @@ function createTodoElement(todo) {
   checkCircle.setAttribute(
     "aria-label",
     todo.completed ? "Mark as incomplete" : "Mark as complete"
-  );
-  if (todo.completed) {
+  );  if (todo.completed) {
     checkCircle.classList.add("checked");
     const checkIcon = document.createElement("img");
-    checkIcon.src = "../images/icon-check.svg";
+    checkIcon.src = "./images/icon-check.svg";
     checkIcon.alt = "";
     checkCircle.appendChild(checkIcon);
   }
@@ -212,9 +211,8 @@ function createTodoElement(todo) {
   const deleteButton = document.createElement("button");
   deleteButton.classList.add("delete");
   deleteButton.setAttribute("aria-label", "Delete todo");
-
   const deleteIcon = document.createElement("img");
-  deleteIcon.src = "../images/icon-cross.svg";
+  deleteIcon.src = "./images/icon-cross.svg";
   deleteIcon.alt = "Delete";
 
   deleteButton.appendChild(deleteIcon);
