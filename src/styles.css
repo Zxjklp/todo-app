@@ -253,7 +253,7 @@ h1 {
   text-align: center;
   color: var(--dark-grayish-blue);
   font-size: 0.875rem;
-  margin-block-start: 2rem;
+  margin-block-start: 3rem;
 }
 
 @media (max-width: 47.9375em) {
