@@ -212,7 +212,7 @@ function createTodoElement(todo) {
   deleteButton.classList.add("delete");
   deleteButton.setAttribute("aria-label", "Delete todo");
   const deleteIcon = document.createElement("img");
-  deleteIcon.src = "../images/icon-cross.svg";
+  deleteIcon.src = "./images/icon-cross.svg";
   deleteIcon.alt = "Delete";
 
   deleteButton.appendChild(deleteIcon);
