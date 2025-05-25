@@ -299,9 +299,21 @@ h1 {
   *,
   *::before,
   *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
+    scroll-behavior: auto;
+  }
+  
+  /* Specific overrides for elements with transitions */
+  body,
+  .background,
+  .new-todo,
+  .check-circle,
+  .todo-list,
+  .todo-item,
+  .todo-text,
+  .delete {
+    transition-duration: 0.01ms;
   }
 }
