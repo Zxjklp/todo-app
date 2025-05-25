@@ -42,7 +42,7 @@ body.dark {
   top: 0;
   left: 0;
   width: 100%;
-  height: 300px;
+  height: 18.75rem;
   background-image: url('../images/bg-desktop-light.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -55,7 +55,7 @@ body.dark {
 }
 
 .container {
-  max-width: 540px;
+  max-width: 33.75rem;
   margin: 0 auto;
   padding: 4.375rem 1.25rem;
 }
@@ -64,13 +64,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.875rem;
+  margin-block-end: 1.875rem;
 }
 
 h1 {
   color: white;
   font-size: 1.75rem;
-  letter-spacing: 15px;
+  letter-spacing: 0.9375rem;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -79,7 +79,7 @@ h1 {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 5px;
+  padding: 0.3125rem;
 }
 
 .hidden {
@@ -89,15 +89,14 @@ h1 {
 .invisible {
   visibility: hidden;
 }
-
-.new-todo {
+  .new-todo {
   display: flex;
   align-items: center;
   background-color: white;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   padding: 1.25rem;
-  margin-bottom: 1.5625rem;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  margin-block-end: 1.5625rem;
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.05);
   transition: background-color 0.3s ease;
 }
 
@@ -106,11 +105,11 @@ h1 {
 }
 
 .check-circle {
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
   border: 1px solid var(--light-grayish-blue);
-  margin-right: 0.9375rem;
+  margin-inline-end: 0.9375rem;
   cursor: pointer;
   transition: all 0.3s ease;
   flex-shrink: 0;
@@ -141,27 +140,27 @@ h1 {
 
 .todo-list {
   background-color: white;
-  border-radius: 5px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 0.3125rem;
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.05);
   overflow: hidden;
   transition: background-color 0.3s ease;
 }
 
 .dark .todo-list {
   background-color: var(--very-dark-desaturated-blue);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2);
 }
 
 .todo-item {
   display: flex;
   align-items: center;
   padding: 1.25rem;
-  border-bottom: 1px solid var(--very-light-grayish-blue);
+  border-block-end: 1px solid var(--very-light-grayish-blue);
   transition: all 0.3s ease;
 }
 
 .dark .todo-item {
-  border-bottom: 1px solid var(--very-dark-grayish-blue-1);
+  border-block-end: 1px solid var(--very-dark-grayish-blue-1);
 }
 
 .todo-text {
@@ -254,47 +253,55 @@ h1 {
   text-align: center;
   color: var(--dark-grayish-blue);
   font-size: 0.875rem;
-  margin-top: 2rem;
+  margin-block-start: 2rem;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 47.9375em) {
   .background {
     background-image: url('../images/bg-mobile-light.jpg');
-    height: 200px;
+    height: 12.5rem;
   }
 
   .dark .background {
     background-image: url('../images/bg-mobile-dark.jpg');
   }
-
   .container {
-    padding-top: 2.5rem;
+    padding-block-start: 2.5rem;
   }
-
   h1 {
     font-size: 2rem;
-    letter-spacing: 12px;
+    letter-spacing: 0.75rem;
   }
 
   .todo-footer {
     padding: 1.25rem;
   }
-
   .filters {
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -4.0625rem;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    inset-block-end: -4.0625rem;
     justify-content: center;
     background-color: white;
     padding: 1.25rem;
-    margin: 0 1.25rem;
-    border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-inline: 1.25rem;
+    border-radius: 0.3125rem;
+    box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.1);
   }
-
   .dark .filters {
     background-color: var(--very-dark-desaturated-blue);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Respect user's motion preferences for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
