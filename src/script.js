@@ -16,9 +16,12 @@ let currentFilter = "all";
 
 // Initialize the app
 function init() {
-  // Check for saved theme preference
+  // Check for saved theme preference, default to dark mode
   const darkMode = localStorage.getItem("darkMode");
-  if (darkMode === "true") {
+  if (darkMode === "false") {
+    disableDarkMode();
+  } else {
+    // Default to dark mode if no preference is saved
     enableDarkMode();
   }
 
