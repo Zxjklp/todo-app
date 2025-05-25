@@ -201,13 +201,14 @@ function createTodoElement(todo) {
   todoItem.addEventListener("dragover", handleDragOver);
   todoItem.addEventListener("drop", handleDrop);
   todoItem.addEventListener("dragend", handleDragEnd);
-
   const checkCircle = document.createElement("button");
   checkCircle.classList.add("check-circle");
   checkCircle.setAttribute(
     "aria-label",
     todo.completed ? "Mark as incomplete" : "Mark as complete"
-  );  if (todo.completed) {
+  );
+  
+  if (todo.completed) {
     checkCircle.classList.add("checked");
     const checkIcon = document.createElement("img");
     checkIcon.src = "./images/icon-check.svg";

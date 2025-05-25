@@ -113,6 +113,12 @@ h1 {
   cursor: pointer;
   transition: all 0.3s ease;
   flex-shrink: 0;
+  background: none;
+}
+
+.dark .check-circle {
+  border-color: var(--very-dark-grayish-blue-1);
+  background-color: var(--very-dark-desaturated-blue);
 }
 
 .check-circle.checked {
