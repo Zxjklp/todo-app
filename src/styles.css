@@ -164,6 +164,7 @@ h1 {
   flex: 1; 
   color: var(--very-dark-grayish-blue);
   transition: color 0.3s ease, text-decoration 0.3s ease;
+  cursor: pointer;
 }
 
 .dark .todo-text {

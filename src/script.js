@@ -3,6 +3,7 @@ const themeToggle = document.querySelector(".theme-toggle");
 const moonIcon = document.querySelector(".moon");
 const sunIcon = document.querySelector(".sun");
 const newTodoInput = document.querySelector(".new-todo input");
+const newTodoCheckCircle = document.querySelector(".new-todo .check-circle");
 const todoList = document.querySelector(".todo-list");
 const itemsLeftCount = document.querySelector(".items-left");
 const filterButtons = document.querySelectorAll(".filter");
@@ -36,12 +37,19 @@ function init() {
 function setupEventListeners() {
   // Theme toggle
   themeToggle.addEventListener("click", toggleTheme);
-
   // Add new todo
   newTodoInput.addEventListener("keypress", function (e) {
     if (e.key === "Enter" && this.value.trim() !== "") {
       addTodo(this.value.trim());
       this.value = "";
+    }
+  });
+
+  // Add new todo via check circle click
+  newTodoCheckCircle.addEventListener("click", function () {
+    if (newTodoInput.value.trim() !== "") {
+      addTodo(newTodoInput.value.trim());
+      newTodoInput.value = "";
     }
   });
 
@@ -196,10 +204,10 @@ function createTodoElement(todo) {
   }
 
   checkCircle.addEventListener("click", () => toggleTodo(todo.id));
-
   const todoText = document.createElement("p");
   todoText.classList.add("todo-text");
   todoText.textContent = todo.text;
+  todoText.addEventListener("click", () => toggleTodo(todo.id));
 
   const deleteButton = document.createElement("button");
   deleteButton.classList.add("delete");
